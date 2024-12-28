@@ -1,0 +1,419 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #4caf50, #2196f3);
+}
+
+.navbar .nav-link {
+  color: #fff !important; /* White text */
+  margin: 0 15px; /* Space between links */
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #f0a500 !important; /* Highlight color on hover */
+}
+
+.navbar-brand {
+  color: white; /* Brand color */
+}
+.hero-section {
+  position: relative;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  height: 100vh;
+}
+
+.hero-section h1 {
+  /* font-size: 3.5rem; */
+  font-weight: bold;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/banner2.jpg") no-repeat center center/cover;
+  z-index: -2;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Black mask with opacity */
+  z-index: -1;
+}
+
+.hero-center {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary {
+  margin: 10px;
+}
+.faq-section .card-header {
+  cursor: pointer;
+}
+
+
+/* Countdown Wrapper */
+.countdown-wrapper {
+  display: flex;              /* Enables Flexbox layout */
+  justify-content: center;    /* Centers the container horizontally */
+  align-items: center;        /* Centers the container vertically */
+  height: 30vh;
+  overflow: hidden;              /* Full viewport height */
+}
+
+/* Countdown Container */
+.countdown-container {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;           /* Ensures it doesn't exceed 600px */
+  width: 90%;                 /* Makes the container responsive */
+  box-sizing: border-box;     /* Ensures padding is included in the width */
+}
+
+/* Title Styles */
+.countdown-title {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.highlight {
+  color: #00b894;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background: #00b894;
+  
+}
+
+/* Countdown Items */
+.countdown-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.countdown-item {
+  flex: 1;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 10px;
+}
+
+.countdown-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00b894;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.countdown-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .countdown-title {
+    font-size: 20px;
+  }
+
+  .countdown-items {
+    flex-wrap: wrap;
+  }
+
+  .countdown-item {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+  }
+
+  .countdown-value {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-item {
+    flex: 1 1 100%;
+  }
+
+  .countdown-title {
+    font-size: 18px;
+  }
+}
+
+/* Event Objective Section */
+
+#event-objective h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#event-objective p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+.event-image {
+  width: 100%; /* Image will fill the container */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Slightly rounded corners for better design */
+}
+
+#event-objective .row {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Adds spacing between text and image */
+}
+
+#event-objective .col-md-6 {
+  flex: 1; /* Ensures the two columns take up equal space */
+}
+
+@media (max-width: 768px) {
+  #event-objective .row {
+    flex-direction: column; /* Stack the image and text vertically */
+  }
+
+  #event-objective .col-md-6 {
+    text-align: center; /* Center text for better appearance on small screens */
+  }
+
+  .event-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #event-objective h2 {
+    font-size: 1.75rem; /* Adjust heading font size for smaller screens */
+  }
+
+  #event-objective p {
+    font-size: 0.9rem; /* Slightly smaller text for smaller screens */
+  }
+}
+
+#sponsors h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.sponsor-logos-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sponsor-logos {
+  display: flex;
+  animation: scrollSponsorLogos 20s linear infinite;
+}
+
+.sponsor {
+  margin: 0 30px;
+}
+
+.sponsor img {
+  max-width: 100px;
+  height: auto;
+}
+
+@keyframes scrollSponsorLogos {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Speaker Card Styles */
+/* Speaker Card Styles */
+.speaker-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.speaker-card img {
+  width: 100%; /* Reduced size */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.speaker-card .card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.speaker-card h3,
+.speaker-card p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.speaker-card p.description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.speaker-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.speaker-card:hover .card-body {
+  opacity: 1;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px 0;
+}
+.footer a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #ff6347; /* Hover effect color */
+  text-decoration: underline;
+}
+.footer .social-icons a {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #f8f9fa;
+}
+.footer .social-icons a:hover {
+  color: #ff6347;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+}
+.subscribe-form input[type="email"] {
+  max-width: 300px;
+  margin-right: 10px;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6347;
+  color: #ffffff;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+.back-to-top:hover {
+  background-color: #1a1a1a;
+}
+
+.carousel-item img.fixed-size {
+  height: 500px; /* Set fixed height */
+  width: 100%; /* Full width */
+  object-fit: cover; /* Maintain aspect ratio and crop overflow */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for image appearance */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item img.fixed-size {
+    height: 300px; /* Smaller height for mobile devices */
+  }
+}
+
+/* Ensures that the carousel container maintains a fixed height to avoid jumps */
+.carousel-inner {
+  height: 500px; /* Matches the height of the images */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Mobile height adjustment */
+@media (max-width: 768px) {
+  .carousel-inner {
+    height: 300px; /* Adjust for smaller screens */
+  }
+}
+
+/* Add smooth transitions for the carousel-item */
+.carousel-item {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Optional: Add hover effects for a smoother experience */
+.carousel-item img.fixed-size:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
